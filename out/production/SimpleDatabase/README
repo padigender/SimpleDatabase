@@ -1,0 +1,14 @@
+Compile:
+javac *.java
+
+Execute: 
+
+Interactive:
+java DataBaseImpl
+
+File:
+java DataBaseImpl input
+
+Implementation:
+
+The Database uses two Maps, one to store the name,value pair and one to store value,count pair. There are two kinds of Database implementation classes, first one HashDatabase which uses Java HashMap to store the names and values which and the other TreeDatabase which uses Java TreeMap to store the names and values. HashDatabase is more efficient which provides a constant time complexity for the given operations, where as TreeDatabase provides logN time complexity, but TreeDatabase can be used for scenarios where we can preserve sorting order of the keys which will be efficient for range queries. And for the transactions I have used a Stack to save and Rollback/Commit commands on the database. 
